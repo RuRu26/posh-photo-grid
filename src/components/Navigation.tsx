@@ -24,37 +24,37 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-white/95 backdrop-blur-md border-b border-gray-100' : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-8 py-6">
         <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-gray-900">
+          <h1 className="text-xl font-light text-black tracking-wide">
             Your Name
           </h1>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-12">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              className="text-sm text-gray-600 hover:text-black transition-colors duration-200 uppercase tracking-widest"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              className="text-sm text-gray-600 hover:text-black transition-colors duration-200 uppercase tracking-widest"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('gallery')}
-              className="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              className="text-sm text-gray-600 hover:text-black transition-colors duration-200 uppercase tracking-widest"
             >
-              Portfolio
+              Work
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              className="text-sm text-gray-600 hover:text-black transition-colors duration-200 uppercase tracking-widest"
             >
               Contact
             </button>
@@ -63,36 +63,36 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-gray-700 hover:text-gray-900"
+            className="md:hidden text-black hover:text-gray-600"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-2">
+          <div className="md:hidden mt-8 pb-6 space-y-6 border-t border-gray-100 pt-6">
             <button
               onClick={() => scrollToSection('home')}
-              className="block w-full text-left py-2 text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              className="block w-full text-left text-sm text-gray-600 hover:text-black transition-colors duration-200 uppercase tracking-widest"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="block w-full text-left py-2 text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              className="block w-full text-left text-sm text-gray-600 hover:text-black transition-colors duration-200 uppercase tracking-widest"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('gallery')}
-              className="block w-full text-left py-2 text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              className="block w-full text-left text-sm text-gray-600 hover:text-black transition-colors duration-200 uppercase tracking-widest"
             >
-              Portfolio
+              Work
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="block w-full text-left py-2 text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              className="block w-full text-left text-sm text-gray-600 hover:text-black transition-colors duration-200 uppercase tracking-widest"
             >
               Contact
             </button>
